@@ -64,7 +64,52 @@ body {
   padding: 10px;
 }
 
+button {
+  min-height: 50px;
+  font-size: 20px;
+  font-weight: 100;
+  border: none; /* no border outline */
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: rgb(199, 199, 199);
+}
+
+button:hover {
+  filter: brightness(110%);
+}
+
+button:active {
+  transform: translateY(1px); /* going down 1px when we click on it */
+}
+
+button:focus {
+  outline: none; /* no outline when clicked */
+}
+
+.operator {
+  background: grey;
+  color: white;
+  font-size: 30px;
+}
+
+.clear {
+  background: rgb(255, 60, 60);
+  color: white;
+}
+
+.clear:hover {
+  filter: brightness(90%);
+}
+
 .equal-sign {
   grid-column: -2; /* starting from -2 column */
   grid-row: 2 / span 4; /* starting from 2nd row and spanning acros 4 rows */
+  background: rgb(13, 206, 87);
+}
+
+/* Media Query: Large Smartphone (Vertical) */
+@media screen and (max-width: 600px) {
+  .calculator {
+    width: 95%;
+  }
 }
